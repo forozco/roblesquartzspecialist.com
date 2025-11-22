@@ -4,9 +4,15 @@ E-commerce platform for Robles Quartz Specialist, built with Laravel 8.75 and Bo
 
 ## 📚 Documentación
 
-- **[INICIO-RAPIDO.md](INICIO-RAPIDO.md)** - Guía rápida para diseñadores (¡empieza aquí! 👈)
-- **[MANUAL.md](MANUAL.md)** - Manual completo de instalación paso a paso
-- **[DEVELOPMENT.md](DEVELOPMENT.md)** - Guía de desarrollo para programadores
+**Para Diseñadores (no técnicos):**
+- **[PARA-DISEÑADOR.md](PARA-DISEÑADOR.md)** - 👈 **EMPIEZA AQUÍ** si no eres programador
+- **[INICIO-RAPIDO.md](INICIO-RAPIDO.md)** - Guía rápida de referencia
+
+**Para Desarrolladores:**
+- **[MANUAL.md](MANUAL.md)** - Manual completo de instalación
+- **[DEVELOPMENT.md](DEVELOPMENT.md)** - Guía de desarrollo y flujo de trabajo
+
+**Herramientas:**
 - **[setup.sh](setup.sh)** - Script de instalación automática
 
 ## Features
