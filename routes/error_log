@@ -1,0 +1,4 @@
+[30-May-2025 13:34:00 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home2/buscatuc/roblesquartzspecialist.com/routes/api.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/routes/api.php on line 17

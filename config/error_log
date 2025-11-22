@@ -1,0 +1,224 @@
+[12-May-2024 19:16:39 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[13-May-2024 07:31:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[04-Nov-2024 22:10:14 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[04-Nov-2024 22:10:15 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[04-Nov-2024 22:10:15 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/cache.php on line 18
+[04-Nov-2024 22:10:15 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/queue.php on line 16
+[04-Nov-2024 22:10:15 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/session.php on line 21
+[04-Nov-2024 22:10:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home2/buscatuc/roblesquartzspecialist.com/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/view.php on line 17
+[04-Nov-2024 22:10:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php on line 16
+[04-Nov-2024 22:10:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/services.php on line 18
+[04-Nov-2024 22:10:21 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/broadcasting.php on line 18
+[17-Feb-2025 23:51:24 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[12-Apr-2025 13:53:46 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/services.php on line 18
+[28-May-2025 07:13:51 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/session.php on line 21
+[28-May-2025 07:13:51 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home2/buscatuc/roblesquartzspecialist.com/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/view.php on line 17
+[28-May-2025 07:13:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php on line 16
+[28-May-2025 07:13:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/services.php on line 18
+[30-May-2025 13:33:35 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/services.php on line 18
+[30-May-2025 13:33:41 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[30-May-2025 13:34:46 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/cache.php on line 18
+[30-May-2025 13:34:47 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php on line 16
+[30-May-2025 13:34:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home2/buscatuc/roblesquartzspecialist.com/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/view.php on line 17
+[15-Jun-2025 01:31:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[15-Jun-2025 01:31:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[15-Jun-2025 12:41:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[15-Jun-2025 12:41:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[15-Jun-2025 20:33:51 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[15-Jun-2025 20:34:11 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[18-Jun-2025 00:11:34 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[18-Jun-2025 00:11:54 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[19-Jun-2025 21:54:05 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[19-Jun-2025 21:54:29 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[21-Jun-2025 22:16:56 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[21-Jun-2025 22:17:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[23-Jun-2025 00:53:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[23-Jun-2025 00:53:43 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/broadcasting.php on line 18
+[23-Jun-2025 00:53:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/cache.php on line 18
+[23-Jun-2025 00:54:02 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[23-Jun-2025 00:54:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/filesystems.php on line 16
+[23-Jun-2025 00:54:37 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/queue.php on line 16
+[23-Jun-2025 00:54:46 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/services.php on line 18
+[23-Jun-2025 00:54:49 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/session.php on line 21
+[23-Jun-2025 00:54:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home2/buscatuc/roblesquartzspecialist.com/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/view.php on line 17
+[30-Jun-2025 07:44:08 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[30-Jun-2025 07:44:30 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[03-Jul-2025 01:35:29 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[03-Jul-2025 01:35:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[21-Jul-2025 04:12:39 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[31-Jul-2025 12:34:12 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[02-Aug-2025 19:50:50 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[07-Aug-2025 11:08:05 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[07-Aug-2025 11:09:10 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[11-Aug-2025 04:40:27 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[11-Aug-2025 04:40:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/app.php on line 16
+[17-Aug-2025 21:47:42 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
+[21-Aug-2025 06:38:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home2/buscatuc/roblesquartzspecialist.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home2/buscatuc/roblesquartzspecialist.com/config/database.php on line 18
