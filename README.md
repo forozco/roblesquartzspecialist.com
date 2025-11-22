@@ -1,66 +1,196 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Robles Quartz Specialist
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+E-commerce platform for Robles Quartz Specialist, built with Laravel 8.75 and Bootstrap 5.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Laravel 8.75 framework
+- Bootstrap 5 responsive design
+- MercadoPago payment integration
+- Multi-language support (EN/ES)
+- Product catalog management
+- Contact form with email notifications
+- Docker-based development environment
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Backend**: Laravel 8.75 (PHP 8.1)
+- **Frontend**: Bootstrap 5, Laravel Mix
+- **Database**: MySQL 8.0
+- **Payments**: MercadoPago SDK
+- **Email**: SMTP (Titan)
+- **Development**: Docker with Laravel Sail
 
-## Learning Laravel
+## Prerequisites
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- Git
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/forozco/roblesquartzspecialist.com.git
+   cd roblesquartzspecialist.com
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. **Install Composer dependencies using Docker**
+   ```bash
+   docker run --rm \
+       -u "$(id -u):$(id -g)" \
+       -v "$(pwd):/var/www/html" \
+       -w /var/www/html \
+       laravelsail/php81-composer:latest \
+       composer install --ignore-platform-reqs
+   ```
 
-### Premium Partners
+3. **Create environment file**
+   ```bash
+   cp .env.example .env
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
+   Update the following variables in `.env`:
+   ```
+   DB_CONNECTION=mysql
+   DB_HOST=mysql
+   DB_PORT=3306
+   DB_DATABASE=buscatuc_roblesstore
+   DB_USERNAME=sail
+   DB_PASSWORD=password
 
-## Contributing
+   WWWGROUP=1000
+   WWWUSER=1000
+   APP_PORT=8080
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. **Start Docker containers**
+   ```bash
+   ./vendor/bin/sail up -d
+   ```
 
-## Code of Conduct
+5. **Install PDO MySQL extension** (first time only)
+   ```bash
+   docker exec roblesquartzspecialistcom-laravel.test-1 docker-php-ext-install pdo_mysql
+   docker restart roblesquartzspecialistcom-laravel.test-1
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. **Run database migrations**
+   ```bash
+   docker exec roblesquartzspecialistcom-laravel.test-1 php artisan migrate --force
+   ```
 
-## Security Vulnerabilities
+7. **Install Node dependencies and compile assets**
+   ```bash
+   npm install
+   npm run production
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+8. **Access the application**
+   - Frontend: http://localhost:8080
+   - MySQL: localhost:3306
+
+## Development
+
+### Start development environment
+```bash
+./vendor/bin/sail up -d
+```
+
+### Stop development environment
+```bash
+./vendor/bin/sail down
+```
+
+### Watch for asset changes
+```bash
+npm run watch
+```
+
+### Run artisan commands
+```bash
+./vendor/bin/sail artisan <command>
+```
+
+### Access Laravel container
+```bash
+docker exec -it roblesquartzspecialistcom-laravel.test-1 bash
+```
+
+## Database
+
+The application uses MySQL 8.0 with the following credentials:
+
+- **Database**: buscatuc_roblesstore
+- **User**: sail
+- **Password**: password
+- **Root Password**: password
+
+## Environment Variables
+
+Key environment variables in `.env`:
+
+```env
+APP_NAME=Laravel
+APP_ENV=production
+APP_KEY=base64:PNkyZUkAlQF1WfaV0lcV3MY6M8oe40Gx4wYqJAYNp8U=
+APP_DEBUG=true
+APP_URL=https://roblesquartzspecialist.com/
+
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=buscatuc_roblesstore
+DB_USERNAME=sail
+DB_PASSWORD=password
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.titan.email
+MAIL_PORT=465
+MAIL_USERNAME=info@roblesquartzspecialist.com
+MAIL_ENCRYPTION=SSL
+
+MP_PUBLIC_KEY=your_mercadopago_public_key
+MP_ACCESS_TOKEN=your_mercadopago_access_token
+```
+
+## Production Deployment
+
+1. Set `APP_ENV=production` and `APP_DEBUG=false` in `.env`
+2. Run `php artisan config:cache`
+3. Run `php artisan route:cache`
+4. Run `npm run production`
+5. Configure web server (nginx/Apache) to point to `public/` directory
+
+## Troubleshooting
+
+### Containers won't start
+```bash
+# View logs
+docker logs roblesquartzspecialistcom-laravel.test-1
+docker logs roblesquartzspecialistcom-mysql-1
+
+# Restart everything
+./vendor/bin/sail down -v
+./vendor/bin/sail up -d
+```
+
+### Permission issues
+```bash
+chmod +x vendor/bin/sail
+chmod +x vendor/laravel/sail/bin/sail
+chmod +x node_modules/.bin/*
+```
+
+### Database connection errors
+- Ensure MySQL container is healthy: `docker ps`
+- Wait 30 seconds after starting containers for MySQL to initialize
+- Check `.env` database credentials match docker-compose.yml
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is proprietary software. All rights reserved.
+
+## Contact
+
+For support or inquiries, contact: info@roblesquartzspecialist.com
