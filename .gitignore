@@ -13,5 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/.claude
 .DS_Store
 composer.phar
