@@ -104,9 +104,43 @@ fi
 chmod +x vendor/bin/sail 2>/dev/null || true
 chmod +x vendor/laravel/sail/bin/sail 2>/dev/null || true
 
+# Pre-descargar imágenes Docker
+print_header "4/7 - Descargando imágenes Docker"
+print_info "Descargando imágenes necesarias..."
+echo ""
+echo -e "${YELLOW}⏳ IMPORTANTE: Esta descarga puede tardar 10-20 minutos la primera vez${NC}"
+echo -e "${YELLOW}   Verás barras de progreso. NO cierres la terminal.${NC}"
+echo -e "${YELLOW}   Tamaño total: ~2-3 GB${NC}"
+echo ""
+
+# Descargar imágenes individualmente con mejor feedback
+print_info "Descargando imagen PHP (1/2) - ~1.5 GB..."
+if ! docker pull laravelsail/php81-composer:latest; then
+    print_error "Error descargando imagen PHP"
+    echo ""
+    echo "💡 Posibles soluciones:"
+    echo "  1. Verifica tu conexión a internet"
+    echo "  2. Reinicia Docker Desktop"
+    echo "  3. Espera unos minutos y ejecuta de nuevo: ./setup.sh"
+    exit 1
+fi
+print_success "Imagen PHP descargada"
+
+print_info "Descargando imagen MySQL (2/2) - ~700 MB..."
+if ! docker pull mysql/mysql-server:8.0; then
+    print_error "Error descargando imagen MySQL"
+    echo ""
+    echo "💡 Posibles soluciones:"
+    echo "  1. Verifica tu conexión a internet"
+    echo "  2. Reinicia Docker Desktop"
+    echo "  3. Espera unos minutos y ejecuta de nuevo: ./setup.sh"
+    exit 1
+fi
+print_success "Imagen MySQL descargada"
+
 # Levantar contenedores Docker
-print_header "4/7 - Iniciando contenedores Docker"
-print_info "Descargando imágenes Docker (solo la primera vez)..."
+print_header "5/7 - Iniciando contenedores Docker"
+print_info "Iniciando servicios..."
 
 ./vendor/bin/sail up -d
 
@@ -135,7 +169,7 @@ done
 echo ""
 
 # Instalar extensión PDO MySQL
-print_header "5/7 - Configurando extensión de base de datos"
+print_header "6/7 - Configurando extensión de base de datos"
 
 if ! docker exec roblesquartzspecialistcom-laravel.test-1 php -m | grep -q "pdo_mysql"; then
     print_info "Instalando pdo_mysql..."
@@ -148,13 +182,13 @@ else
 fi
 
 # Ejecutar migraciones
-print_header "6/7 - Configurando base de datos"
+print_header "7/8 - Configurando base de datos"
 
 docker exec roblesquartzspecialistcom-laravel.test-1 php artisan migrate --force
 print_success "Base de datos configurada"
 
 # Instalar dependencias de Node (opcional)
-print_header "7/7 - Instalando dependencias de Node.js"
+print_header "8/8 - Instalando dependencias de Node.js"
 
 if command -v npm &> /dev/null; then
     if [ ! -d "node_modules" ]; then
