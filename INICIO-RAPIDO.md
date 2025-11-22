@@ -1,4 +1,4 @@
-# 🚀 Inicio Rápido - Para Diseñadores
+# 🚀 Inicio Rápido
 
 ## Antes de empezar (solo una vez)
 
