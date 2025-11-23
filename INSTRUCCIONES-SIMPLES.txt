@@ -1,0 +1,156 @@
+========================================
+ROBLES QUARTZ SPECIALIST
+Instrucciones de Instalación
+========================================
+
+Hola! Estas son las instrucciones para instalar el proyecto en tu computadora.
+Es muy fácil, solo sigue estos pasos:
+
+========================================
+PASO 1: Instalar Docker Desktop
+========================================
+
+1. Ve a esta página:
+   https://www.docker.com/products/docker-desktop
+
+2. Descarga "Docker Desktop for Mac"
+
+3. Instala el programa (como cualquier otra app de Mac)
+
+4. IMPORTANTE: Abre Docker Desktop
+   - Busca el ícono de la ballena en la barra superior
+   - Espera a que deje de moverse
+   - Eso significa que está listo
+
+========================================
+PASO 2: Descargar el Proyecto
+========================================
+
+1. Abre "Terminal" (búscala con Cmd+Espacio y escribe "terminal")
+
+2. Copia y pega esto (línea por línea):
+
+   git clone https://github.com/forozco/roblesquartzspecialist.com.git
+
+3. Presiona Enter y espera
+
+4. Cuando termine, escribe:
+
+   cd roblesquartzspecialist.com
+
+5. Presiona Enter
+
+========================================
+PASO 3: Instalar Todo Automáticamente
+========================================
+
+1. En la Terminal, escribe:
+
+   ./setup.sh
+
+2. Presiona Enter
+
+3. ESPERA PACIENTEMENTE (15-20 minutos)
+   - Verás texto corriendo
+   - Verás barras de progreso
+   - NO cierres la Terminal
+   - Toma un café ☕
+
+4. Al final verás:
+   "¡Instalación Completada! 🎉"
+
+========================================
+PASO 4: Abrir el Sitio
+========================================
+
+1. Abre tu navegador (Chrome, Safari, etc.)
+
+2. Ve a: http://localhost:8080
+
+3. Deberías ver la página de Robles Quartz Specialist
+
+¡Listo! 🎉
+
+========================================
+USO DIARIO
+========================================
+
+Cada vez que quieras trabajar:
+
+1. Abre Terminal
+2. Escribe: cd roblesquartzspecialist.com
+3. Escribe: ./vendor/bin/sail up -d
+4. Abre: http://localhost:8080
+
+Cuando termines:
+- Escribe: ./vendor/bin/sail down
+
+========================================
+ARCHIVOS QUE PUEDES EDITAR
+========================================
+
+HTML (páginas):
+- resources/views/welcome.blade.php (inicio)
+- resources/views/productos.blade.php
+- resources/views/contacto.blade.php
+
+CSS (estilos):
+- resources/css/styles.css
+
+Imágenes:
+- public/img/ (arrastra y suelta aquí)
+
+Después de cambiar CSS:
+- Ejecuta: npm run production
+- Recarga la página con Cmd+Shift+R
+
+========================================
+¿PROBLEMAS?
+========================================
+
+Lee el archivo: PARA-DISEÑADOR.md
+(Tiene todas las soluciones explicadas)
+
+O contacta al equipo de desarrollo.
+
+========================================
+MÁS INFORMACIÓN
+========================================
+
+Todos los detalles están en estos archivos:
+
+- PARA-DISEÑADOR.md (lee este primero!)
+- INICIO-RAPIDO.md
+- MANUAL.md
+
+Todos están en la carpeta del proyecto.
+
+========================================
+COMANDOS ÚTILES
+========================================
+
+Copia y pega según necesites:
+
+# Iniciar
+./vendor/bin/sail up -d
+
+# Detener
+./vendor/bin/sail down
+
+# Ver si está corriendo
+docker ps
+
+# Compilar CSS
+npm run production
+
+# Reinstalar todo desde cero
+./vendor/bin/sail down -v
+./setup.sh
+
+========================================
+
+¡Cualquier duda, pregunta!
+
+El equipo de desarrollo está aquí para ayudarte.
+
+========================================
