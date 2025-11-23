@@ -107,15 +107,12 @@ docker exec roblesquartzspecialistcom-laravel.test-1 php artisan tinker --execut
 echo "✓ Usuario administrador listo"
 echo ""
 
-# Step 11: Install Node dependencies and compile assets
-echo "🎨 Paso 11/11: Compilando assets (esto puede tomar unos minutos)..."
-if command -v npm &> /dev/null; then
-    npm install --silent
-    npm run production --silent
-    echo "✓ Assets compilados"
-else
-    echo "⚠️  npm no encontrado. Deberás ejecutar 'npm install && npm run production' manualmente."
-fi
+# Step 11: Install Node.js in container and compile assets
+echo "🎨 Paso 11/11: Instalando Node.js y compilando assets (esto puede tomar unos minutos)..."
+docker exec roblesquartzspecialistcom-laravel.test-1 apt-get install -y nodejs npm > /dev/null 2>&1
+docker exec roblesquartzspecialistcom-laravel.test-1 npm install --silent
+docker exec roblesquartzspecialistcom-laravel.test-1 npm run production --silent
+echo "✓ Assets compilados"
 echo ""
 
 echo "======================================================================"
