@@ -268,7 +268,7 @@ Si tienes problemas:
 
 1. Lee la sección de "Ayuda" arriba
 2. Revisa el archivo **MANUAL.md** (más detallado)
-3. Contacta al equipo de desarrollo
+3. Contacta a **Fernando** (él te ayudará con cualquier cosa)
 
 ---
 
@@ -321,4 +321,4 @@ Verifica que hayas hecho todo:
 **Última actualización:** Noviembre 2024
 **Nivel requerido:** Ninguno (explicado para cualquiera)
 **Tiempo de instalación:** 15-20 minutos
-**Soporte:** Pregunta a tu equipo de desarrollo
+**Soporte:** Fernando está aquí para ayudarte 👍
