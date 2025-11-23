@@ -8,27 +8,57 @@
 2. **Node.js** - Descárgalo de: https://nodejs.org/
    - Descarga la versión LTS (recomendada)
 
+3. **GitHub Desktop** (opcional) - Si prefieres usar interfaz gráfica: https://desktop.github.com/
+
 ## 📥 Pasos para instalar
 
 ### 1. Descarga el proyecto
 
-Abre la terminal y ejecuta:
+**Opción A: Con GitHub Desktop (más fácil)**
+1. Abre GitHub Desktop
+2. Ve a `File` → `Clone repository`
+3. Pega esta URL: `https://github.com/forozco/roblesquartzspecialist.com.git`
+4. Elige dónde guardar el proyecto
+5. Clic en `Clone`
+6. Recuerda la ruta donde lo guardaste (por ejemplo: `C:\Users\TuNombre\Documents\GitHub\roblesquartzspecialist.com`)
 
+**Opción B: Con terminal/línea de comandos**
 ```bash
 git clone https://github.com/forozco/roblesquartzspecialist.com.git
 cd roblesquartzspecialist.com
 ```
 
-### 2. Ejecuta el instalador automático
+### 2. Abre la terminal en la carpeta del proyecto
 
+**En Windows:**
+1. Abre el explorador de archivos
+2. Navega a la carpeta donde clonaste el proyecto
+3. En la barra de dirección, escribe `cmd` y presiona Enter
+4. Se abrirá la terminal en esa ubicación
+
+**En Mac:**
+1. Abre Finder
+2. Ve a la carpeta del proyecto
+3. Clic derecho en la carpeta → `Services` → `New Terminal at Folder`
+
+### 3. Ejecuta el instalador automático
+
+En la terminal que acabas de abrir, escribe:
+
+**En Mac/Linux:**
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
 
+**En Windows (Git Bash):**
+```bash
+bash install.sh
+```
+
 **¡Eso es todo!** El script hará todo el trabajo por ti. Toma un café ☕ mientras se instala (puede tardar 5-10 minutos).
 
-### 3. Abre la aplicación
+### 4. Abre la aplicación
 
 Cuando termine, abre tu navegador y ve a:
 - **Página pública**: http://localhost:8080
@@ -73,6 +103,19 @@ Para acceder al panel de administración:
 ```bash
 docker logs roblesquartzspecialistcom-laravel.test-1
 ```
+
+## 📋 Resumen rápido (para compartir)
+
+**Si ya tienes el proyecto descargado con GitHub Desktop:**
+
+1. Asegúrate de que Docker Desktop esté corriendo
+2. Abre la terminal en la carpeta del proyecto:
+   - **Windows**: En el explorador, en la barra de dirección escribe `cmd` y Enter
+   - **Mac**: Clic derecho → Services → New Terminal at Folder
+3. Ejecuta: `./install.sh` (Mac/Linux) o `bash install.sh` (Windows)
+4. Espera 5-10 minutos
+5. Abre http://localhost:8080/login
+6. Usuario: `info@roblesquartzspecialist.com` / Contraseña: `12345678`
 
 ## 📞 ¿Necesitas ayuda?
 
