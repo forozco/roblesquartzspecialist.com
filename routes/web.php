@@ -59,5 +59,6 @@ Route::put('/adminwholesale/{id}', [App\Http\Controllers\HomeController::class, 
 
 Route::get('/actwholesale/{id}', [App\Http\Controllers\HomeController::class, 'actwholesale'])->name('actwholesale');
 
+Route::delete('/deletewholesale/{id}', [App\Http\Controllers\HomeController::class, 'deletewholesale'])->name('deletewholesale');
 
 

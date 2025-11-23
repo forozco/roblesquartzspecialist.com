@@ -145,6 +145,21 @@ class HomeController extends Controller
 
     public function altawholesale(Request $request){
 
+        $request->validate([
+            'clave' => 'required|string|max:255',
+            'nombre' => 'required|string|max:255',
+            'cantidad' => 'required|numeric',
+            'detalles' => 'required|string',
+            'material' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ], [
+            'clave.required' => 'La clave es obligatoria',
+            'nombre.required' => 'El nombre es obligatorio',
+            'cantidad.required' => 'La cantidad es obligatoria',
+            'detalles.required' => 'Los detalles son obligatorios',
+            'material.required' => 'La imagen es obligatoria',
+            'material.image' => 'El archivo debe ser una imagen',
+        ]);
+
         $alta = new Wholesale;
         $alta->clue = $request->clave;
         $alta->name = $request->nombre;
@@ -216,5 +231,28 @@ class HomeController extends Controller
         }
         $actwholesale->save();
         return back()->with('mensaje','Status actualizado');
+    }
+
+    public function deletewholesale($id){
+        $wholesale = Wholesale::findOrFail($id);
+
+        // Delete image files if they exist
+        if ($wholesale->material) {
+            $materialPath = public_path().'/storage/material/'.$wholesale->material;
+            if (file_exists($materialPath)) {
+                unlink($materialPath);
+            }
+        }
+
+        if ($wholesale->application) {
+            $applicationPath = public_path().'/storage/aplicacion/'.$wholesale->application;
+            if (file_exists($applicationPath)) {
+                unlink($applicationPath);
+            }
+        }
+
+        $wholesale->delete();
+
+        return back()->with('mensaje','Wholesale item eliminado correctamente');
     }
 }
