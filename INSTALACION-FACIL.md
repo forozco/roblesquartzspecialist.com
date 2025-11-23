@@ -82,10 +82,27 @@ Para acceder al panel de administración:
 - Luego: `./install.sh`
 
 ### No puedo iniciar sesión
-- Ejecuta este comando:
+- Usa el script automático para crear/resetear el usuario:
   ```bash
-  docker exec roblesquartzspecialistcom-laravel.test-1 php artisan tinker --execute="App\Models\User::create(['name' => 'Admin', 'email' => 'info@roblesquartzspecialist.com', 'password' => bcrypt('12345678')]);"
+  chmod +x create-admin.sh
+  ./create-admin.sh
   ```
+
+### Después de reiniciar con `sail down`
+
+Cuando detengas los contenedores con `./vendor/bin/sail down` y quieras volver a iniciarlos, usa el script `restart.sh` en lugar de `sail up`:
+
+```bash
+chmod +x restart.sh
+./restart.sh
+```
+
+Este script automáticamente:
+- Inicia los contenedores
+- Reinstala las extensiones PHP necesarias (PDO MySQL, GD Library)
+- Reinicia el contenedor para aplicar los cambios
+
+**¿Por qué?** Docker crea contenedores nuevos cada vez que haces `down`/`up`, por lo que las extensiones PHP que instalaste manualmente se pierden. El script `restart.sh` las reinstala automáticamente por ti. 🎉
 
 ## 🛠️ Comandos útiles
 

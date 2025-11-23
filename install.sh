@@ -49,9 +49,9 @@ chmod +x vendor/laravel/sail/bin/sail
 echo "✓ Permisos configurados"
 echo ""
 
-# Step 4: Start Docker containers
-echo "🐳 Paso 4/10: Iniciando contenedores Docker..."
-./vendor/bin/sail up -d
+# Step 4: Build and start Docker containers
+echo "🐳 Paso 4/8: Construyendo y iniciando contenedores Docker (esto puede tomar unos minutos la primera vez)..."
+./vendor/bin/sail up -d --build
 echo "✓ Contenedores iniciados"
 echo ""
 
@@ -61,58 +61,32 @@ sleep 15
 echo "✓ MySQL listo"
 echo ""
 
-# Step 5: Install PHP extensions
-echo "📚 Paso 5/10: Instalando extensiones PHP (PDO MySQL y GD)..."
-docker exec roblesquartzspecialistcom-laravel.test-1 docker-php-ext-install pdo_mysql > /dev/null 2>&1
-
-# Install GD Library dependencies
-docker exec roblesquartzspecialistcom-laravel.test-1 apt-get update > /dev/null 2>&1
-docker exec roblesquartzspecialistcom-laravel.test-1 apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev > /dev/null 2>&1
-docker exec roblesquartzspecialistcom-laravel.test-1 docker-php-ext-configure gd --with-freetype --with-jpeg > /dev/null 2>&1
-docker exec roblesquartzspecialistcom-laravel.test-1 docker-php-ext-install gd > /dev/null 2>&1
-
-echo "✓ Extensiones PHP instaladas"
-echo ""
-
-# Step 6: Restart container
-echo "🔄 Paso 6/11: Reiniciando contenedor..."
-docker restart roblesquartzspecialistcom-laravel.test-1 > /dev/null 2>&1
-sleep 5
-echo "✓ Contenedor reiniciado"
-echo ""
-
-# Step 7: Install Doctrine DBAL
-echo "📦 Paso 7/11: Instalando Doctrine DBAL (requerido para migraciones)..."
+# Step 5: Install Doctrine DBAL
+echo "📦 Paso 5/8: Instalando Doctrine DBAL (requerido para migraciones)..."
 docker exec roblesquartzspecialistcom-laravel.test-1 composer require "doctrine/dbal:^3.0" --quiet
 echo "✓ Doctrine DBAL instalado"
 echo ""
 
-# Step 8: Run migrations
-echo "🗄️  Paso 8/11: Ejecutando migraciones de base de datos..."
+# Step 6: Run migrations
+echo "🗄️  Paso 6/8: Ejecutando migraciones de base de datos..."
 docker exec roblesquartzspecialistcom-laravel.test-1 php artisan migrate --force
 echo "✓ Migraciones completadas"
 echo ""
 
-# Step 9: Create storage directories
-echo "📁 Paso 9/11: Creando directorios de almacenamiento..."
+# Step 7: Create storage directories
+echo "📁 Paso 7/8: Creando directorios de almacenamiento..."
 docker exec roblesquartzspecialistcom-laravel.test-1 mkdir -p public/storage/material
 docker exec roblesquartzspecialistcom-laravel.test-1 mkdir -p public/storage/aplicacion
 docker exec roblesquartzspecialistcom-laravel.test-1 chmod -R 777 public/storage
 echo "✓ Directorios creados"
 echo ""
 
-# Step 10: Create admin user
-echo "👤 Paso 10/11: Creando usuario administrador..."
+# Step 8: Create admin user and compile assets
+echo "👤 Paso 8/8: Creando usuario administrador y compilando assets..."
 docker exec roblesquartzspecialistcom-laravel.test-1 php artisan tinker --execute="try { App\Models\User::create(['name' => 'Admin', 'email' => 'info@roblesquartzspecialist.com', 'password' => bcrypt('12345678')]); echo 'Usuario creado'; } catch (\Exception \$e) { echo 'Usuario ya existe'; }" 2>/dev/null || echo "Usuario administrador configurado"
-echo "✓ Usuario administrador listo"
-echo ""
-
-# Step 11: Install Node.js in container and compile assets
-echo "🎨 Paso 11/11: Instalando Node.js y compilando assets (esto puede tomar unos minutos)..."
-docker exec roblesquartzspecialistcom-laravel.test-1 apt-get install -y nodejs npm > /dev/null 2>&1
 docker exec roblesquartzspecialistcom-laravel.test-1 npm install --silent
 docker exec roblesquartzspecialistcom-laravel.test-1 npm run production --silent
-echo "✓ Assets compilados"
+echo "✓ Configuración completada"
 echo ""
 
 echo "======================================================================"
