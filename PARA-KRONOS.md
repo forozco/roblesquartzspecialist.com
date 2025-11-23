@@ -1,4 +1,4 @@
-# 👋 Hola Diseñador!
+# 👋 Hola Kronos!
 
 Este documento es para ti. Aquí está todo lo que necesitas saber, explicado de forma super simple.
 

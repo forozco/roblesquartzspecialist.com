@@ -5,7 +5,7 @@ E-commerce platform for Robles Quartz Specialist, built with Laravel 8.75 and Bo
 ## 📚 Documentación
 
 **Para Diseñadores (no técnicos):**
-- **[PARA-DISEÑADOR.md](PARA-DISEÑADOR.md)** - 👈 **EMPIEZA AQUÍ** si no eres programador
+- **[PARA-KRONOS.md](PARA-KRONOS.md)** - 👈 **EMPIEZA AQUÍ** Kronos! (guía personalizada)
 - **[INICIO-RAPIDO.md](INICIO-RAPIDO.md)** - Guía rápida de referencia
 
 **Para Desarrolladores:**
