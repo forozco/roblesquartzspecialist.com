@@ -22,6 +22,8 @@ Route::get('/', [PageController::class,'inicio'])->name('inicio');
 
 Route::get('productos', [PageController::class, 'productos'])->name('productos');
 
+Route::get('wholesale', [PageController::class, 'wholesale'])->name('wholesale');
+
 Route::get('proyectos', [PageController::class, 'proyectos'])->name('proyectos');
 
 Route::get('contacto',[PageController::class,'contacto'])->name('contacto');
@@ -48,6 +50,14 @@ Route::post('/adminmaterials', [App\Http\Controllers\HomeController::class, 'alt
 Route::put('/adminmaterials/{id}', [App\Http\Controllers\HomeController::class, 'editmaterial'])->name('editmaterial');
 
 Route::get('/actmaterial/{id}', [App\Http\Controllers\HomeController::class, 'actmaterial'])->name('actmaterial');
+
+Route::get('/adminwholesale', [App\Http\Controllers\HomeController::class, 'adminwholesale'])->name('adminwholesale');
+
+Route::post('/adminwholesale', [App\Http\Controllers\HomeController::class, 'altawholesale'])->name('altawholesale');
+
+Route::put('/adminwholesale/{id}', [App\Http\Controllers\HomeController::class, 'editwholesale'])->name('editwholesale');
+
+Route::get('/actwholesale/{id}', [App\Http\Controllers\HomeController::class, 'actwholesale'])->name('actwholesale');
 
 
 

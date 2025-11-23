@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 use App\Models\material;
+use App\Models\Wholesale;
 
 
 class HomeController extends Controller
@@ -113,8 +114,8 @@ class HomeController extends Controller
 
         return back()->with('mensaje','Material actualizado');
     }
-    public function actmaterial($id){ 
-    
+    public function actmaterial($id){
+
         $actmaterial= material::findOrFail($id);
 
         if ($actmaterial->activo == 1 )
@@ -126,6 +127,94 @@ class HomeController extends Controller
             $actmaterial->activo = 1;
         }
         $actmaterial->save();
+        return back()->with('mensaje','Status actualizado');
+    }
+
+    // Wholesale methods
+    public function adminwholesale(Request $request)
+    {
+        $texto = $request->texto;
+
+        $wholesales = Wholesale::Where('name','LIKE','%'.$texto.'%')
+        ->select('id','clue','name','details','amount','material','application','activo')
+        ->orderBy('clue')
+        ->paginate(15);
+
+        return view('adminwholesale', compact('wholesales'));
+    }
+
+    public function altawholesale(Request $request){
+
+        $alta = new Wholesale;
+        $alta->clue = $request->clave;
+        $alta->name = $request->nombre;
+        $alta->amount = $request->cantidad;
+        $alta->details = $request->detalles;
+
+        if ($request->hasFile('material'))
+        {
+            $name = Str::random(20).'.png';
+
+            // Save to material directory
+            $rutaMaterial = public_path().'/storage/material/'.$name;
+            Image::make( $request->file('material'))
+                    ->resize(800, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    })
+                    ->save($rutaMaterial);
+
+            // Save to aplicacion directory (same image)
+            $rutaAplicacion = public_path().'/storage/aplicacion/'.$name;
+            Image::make( $request->file('material'))
+                    ->resize(800, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    })
+                    ->save($rutaAplicacion);
+
+            $alta->material = $name;
+            $alta->application = $name;
+        }
+
+        $alta->save();
+
+        return back()->with('mensaje','Wholesale item agregado');
+    }
+
+    public function editwholesale(Request $request, $id){
+
+        $edit = Wholesale::findOrFail($id);
+        $edit->area = $request->area;
+        if ($request->hasFile('photo'))
+        {
+            $name = Str::random(10).$request->file('photo')->getClientOriginalName();
+            $ruta = public_path().'/storage/areas/'.$name;
+
+            Image::make( $request->file('photo'))
+                    ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                    })
+                    ->save($ruta);
+
+            $edit->image = $name;
+        }
+        $edit->save();
+
+        return back()->with('mensaje','Wholesale item actualizado');
+    }
+
+    public function actwholesale($id){
+
+        $actwholesale = Wholesale::findOrFail($id);
+
+        if ($actwholesale->activo == 1 )
+        {
+            $actwholesale->activo = 0;
+        }
+        else
+        {
+            $actwholesale->activo = 1;
+        }
+        $actwholesale->save();
         return back()->with('mensaje','Status actualizado');
     }
 }

@@ -5,6 +5,7 @@ return [
     'inicio' => 'Acerca de',
     'contactanos' =>'Contacto',
     'prod' => 'Productos',
+    'wholesale' => 'Mayoreo',
     'projpart' => 'Proyectos y socios',
     'derechos' => 'Copyright © 2023. Robles - Quartz Specialist',
     'terminos' => 'Términos y condiciones',

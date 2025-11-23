@@ -48,6 +48,7 @@
                 <ul class="menu" data-animation="bonus">
                     <li><a href="{{ route('inicio') }}">@lang('contenido.inicio')</a></li>
                     <li><a href="{{ route('productos') }}">@lang('contenido.prod')</a></li>
+                    <li><a href="{{ route('wholesale') }}">@lang('contenido.wholesale')</a></li>
                     <li><a href="{{ route('proyectos') }}">@lang('contenido.projpart')</a></li>
                     <li><a href="{{ route('contacto') }}">@lang('contenido.contactanos')</a></li>
                 </ul>
@@ -129,6 +130,7 @@
                     <ul class="menu-footer-set" >
                         <li><a href="{{ route('inicio') }}">@lang('contenido.inicio')</a></li>
                         <li><a href="{{ route('productos') }}">@lang('contenido.prod')</a></li>
+                        <li><a href="{{ route('wholesale') }}">@lang('contenido.wholesale')</a></li>
                         <li><a href="{{ route('proyectos') }}">@lang('contenido.projpart')</a></li>
                         <li><a href="{{ route('contacto') }}">@lang('contenido.contactanos')</a></li>
                     </ul>
