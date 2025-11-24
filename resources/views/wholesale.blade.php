@@ -203,7 +203,7 @@ body {
             <div class="destinos-set">
 
                 @foreach ($materiales as $item)
-                <div class="destino-25" style="background-image:url(/storage/aplicacion/{{$item->application }});">
+                <div class="destino-25" style="background-image:url({{ asset('storage/aplicacion/' . $item->application) }});">
                     <a class="destino-25-int" id="btn-abrir-popup{{$item->id}}" data-bs-toggle="tooltip" data-bs-placement="right" title="{{$item->clue. ' - '.$item->name}}">
                         <!--button id="btn-abrir-popup{{$item->id}}" class="btn-abrir-popup">Abrir Ventana Emergente</button-->
                         <!--a href="#" class="destino-25-int" style="background-image: url(/img/textura-marmol-1.jpg);"-->
@@ -241,7 +241,7 @@ body {
 
 
 
-                                <img width="90%"  src="{{ url(Storage::url( 'material/'.$item->material)) }}" alt="">
+                                <img width="90%"  src="{{ asset('storage/material/' . $item->material) }}" alt="">
                                 {!! $item->details !!}
 
 
