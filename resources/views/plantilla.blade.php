@@ -3,11 +3,11 @@
   <head>
     <title>Robles - Quartz Specialist</title>
     <meta charset="UTF-8">
-    <link href="styles.css" rel="stylesheet">
+    <link href="{{ asset('styles.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <script src="https://code.jquery.com/jquery-3.5.0.slim.js" integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="shortcut icon" href="./img/fav-icon.png">
+    <link rel="shortcut icon" href="{{ asset('img/fav-icon.png') }}">
     <script src="https://kit.fontawesome.com/26b4b47fca.js" crossorigin="anonymous"></script>
 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css'>
@@ -33,7 +33,7 @@
         </div>
         <div class="container-set logo-nav-container">
             <div class="logo-nav-container">
-            <a class="logo" href="https://roblesquartzspecialist.com/"><img src="./img/logo.png" alt=""></a>
+            <a class="logo" href="https://roblesquartzspecialist.com/"><img src="{{ asset('img/logo.png') }}" alt=""></a>
             <span class="menu-icon">
                 <button class="menu-b" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
                     <svg width="25" height="25" viewBox="0 0 100 100">
@@ -70,7 +70,7 @@
                                 <div class="select" id="select">
                                     <div class="contenido-select">
                                         <div class="contenido-opcion">
-                                            <img src="img/@lang('contenido.imagen').png" alt="">
+                                            <img src="{{ asset('img/' . __('contenido.imagen') . '.png') }}" alt="">
                                             <div class="textos">
                                                 <h1 class="titulo-idioma">@lang('contenido.idioma')</h1>
                                             </div>
@@ -81,21 +81,21 @@
                                 <div class="opciones" id="opciones">
                                     <a href="{{ route('locale','en') }}" class="opcion">
                                     <div class="contenido-opcion">
-                                            <img src="img/USA.png" alt="">
+                                            <img src="{{ asset('img/USA.png') }}" alt="">
                                             <div class="textos">
                                                 <h1 class="titulo-idioma">English</h1>
                                             </div>
                                         </div>
-            
+
                                     </a>
                                     <a href="{{ route('locale','es') }}" class="opcion">
                                         <div class="contenido-opcion">
-                                                <img src="img/MEX.png" alt="">
+                                                <img src="{{ asset('img/MEX.png') }}" alt="">
                                                 <div class="textos">
                                                     <h1 class="titulo-idioma">Español</h1>
                                                 </div>
                                             </div>
-                
+
                                         </a>
                                     </div>
                                 </div>
@@ -115,12 +115,12 @@
     <footer>
         <!--script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script-->
         <script src='https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js'></script>
-        <script src="script.js"></script>
+        <script src="{{ asset('script.js') }}"></script>
 
         <div class="container">
             <div class="cont-footer">
                 <div class="fott-sect logo-footer-set">
-                    <img src="img/logo.png" alt="" style="width: 100%; ">
+                    <img src="{{ asset('img/logo.png') }}" alt="" style="width: 100%; ">
                 </div>
                 <div class="fott-sect oclt">
 
